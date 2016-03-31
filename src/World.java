@@ -22,7 +22,7 @@ public class World{
 		throw new LocationNotFoundException("Could not find location");
 	}
 
-	private void addLocations(Location location){
+	public void addLocation(Location location){
 		this.list.add(location);
 	}
 }//End of Class

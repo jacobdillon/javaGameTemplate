@@ -7,8 +7,7 @@ class main{
 		Parser parser = new Parser(world);
 		try{
 			parser.parse("locfile.txt");
-
-		world.setLocation("test");
+			world.readyLocation("test");
 
 		}
 		catch(FileNotFoundException|parseError|LocationNotFoundException e){
@@ -18,4 +17,6 @@ class main{
 
 		world.printCurrent();
 	}
+
+
 }//End of Class

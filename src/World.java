@@ -12,7 +12,7 @@ public class World{
 		this.list = null;
 	}
 
-	public void setLocation(String name)throws LocationNotFoundException{
+	public void readyLocation(String name)throws LocationNotFoundException{
 		for(Location i:this.list){
 			if(i.getName().equals(name)){
 				this.current = i;
@@ -20,6 +20,7 @@ public class World{
 			}
 		}
 		throw new LocationNotFoundException("Could not find location");
+
 	}
 
 	public void addLocation(Location location){

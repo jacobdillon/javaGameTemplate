@@ -1,0 +1,7 @@
+Name: test
+Desc: This is a room
+Img: /some/path/here
+Left: leftImage
+Right: rightImage
+Up: upImage
+Down: downImage

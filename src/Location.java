@@ -78,4 +78,18 @@ public class Location{
 		return this.Down;
 	}
 
+	public String toString(){
+		String output = "";
+
+		output = "Name: " + this.Name + "\n"+
+			"Description: " + this.Desc + "\n" +
+			"Image: " + this.Img + "\n" +
+			"Left: " + this.Left + "\n" +
+			"Right: " + this.Right + "\n" +
+			"Up: " + this.Up + "\n" +
+			"Down: " + this.Down;
+
+		return output;
+	}
+
 }//End of Class

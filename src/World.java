@@ -12,9 +12,9 @@ public class World{
 		this.list = null;
 	}
 
-	private void setLocation(String name)throws LocationNotFoundException{
+	public void setLocation(String name)throws LocationNotFoundException{
 		for(Location i:this.list){
-			if(i.getName() == name){
+			if(i.getName().equals(name)){
 				this.current = i;
 				return;
 			}
@@ -24,5 +24,9 @@ public class World{
 
 	public void addLocation(Location location){
 		this.list.add(location);
+	}
+
+	public void printCurrent(){
+		System.out.println(current);
 	}
 }//End of Class

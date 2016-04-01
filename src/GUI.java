@@ -1,11 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-//import java.io.File;
-//import java.awt.Graphics;
-//import java.awt.image.BufferedImage;
-//import javax.imageio.ImageIO;
-//import java.io.IOException;
 
 public class GUI extends JFrame {
 	public static void main(String[]args) {
@@ -84,12 +79,6 @@ public class GUI extends JFrame {
 			}
 		});
 		frame.add(right);
-
-		// Test image thing
-		//try {
-		//image.setImage(ImageIO.read(new File("./hello.gif")));
-		//} catch(IOException e) {
-		//}
 
 		// Make it visible
 		frame.setVisible(true);

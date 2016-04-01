@@ -87,7 +87,7 @@ public class GUI extends JFrame {
 
 		// Test image thing
 		//try {
-			//image.setImage(ImageIO.read(new File("./hello.gif")));
+		//image.setImage(ImageIO.read(new File("./hello.gif")));
 		//} catch(IOException e) {
 		//}
 

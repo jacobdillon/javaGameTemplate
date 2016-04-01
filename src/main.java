@@ -1,16 +1,15 @@
 import java.io.FileNotFoundException;
 
-class main{
+class main {
 
-	public static void main(String [] args){
+	public static void main(String [] args) {
 		World world = new World();
 		Parser parser = new Parser(world);
-		try{
+		try {
 			parser.parse("locfile.txt");
 			world.readyLocation("test");
 
-		}
-		catch(FileNotFoundException|parseError|LocationNotFoundException e){
+		} catch(FileNotFoundException|parseError|LocationNotFoundException e) {
 			System.out.println(e);
 		}
 

@@ -1,6 +1,6 @@
-class LocationNotFoundException extends Exception{
+class LocationNotFoundException extends Exception {
 
-	public LocationNotFoundException(String msg){
+	public LocationNotFoundException(String msg) {
 		super(msg);
 	}
 }//End of Class

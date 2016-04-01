@@ -1,5 +1,5 @@
 import java.util.*;
-public class Location{
+public class Location {
 
 	private String Name;
 	private String Desc;
@@ -10,7 +10,7 @@ public class Location{
 	private String Up;
 	private String Down;
 
-	public void Location(){
+	public void Location() {
 		this.Name = null;
 		this.Desc = null;
 		this.Img = null;
@@ -21,73 +21,73 @@ public class Location{
 		this.Down = null;
 	}
 
-	public void setName(String Name){
+	public void setName(String Name) {
 		this.Name = Name;
 	}
 
-	public void setDesc(String Desc){
+	public void setDesc(String Desc) {
 		this.Desc = Desc;
 	}
 
-	public void setImg(String Img){
+	public void setImg(String Img) {
 		this.Img = Img;
 	}
 
-	public void setLeft(String Left){
+	public void setLeft(String Left) {
 		this.Left = Left;
 	}
 
-	public void setRight(String Right){
+	public void setRight(String Right) {
 		this.Right = Right;
 	}
 
-	public void setUp(String Up){
+	public void setUp(String Up) {
 		this.Up = Up;
 	}
 
-	public void setDown(String Down){
+	public void setDown(String Down) {
 		this.Down = Down;
 	}
 
 
-	public String getName(){
+	public String getName() {
 		return this.Name;
 	}
 
-	public String getDesc(){
+	public String getDesc() {
 		return this.Desc;
 	}
 
-	public String getImg(){
+	public String getImg() {
 		return this.Img;
 	}
 
-	public String getLeft(){
+	public String getLeft() {
 		return this.Left;
 	}
 
-	public String getRight(){
+	public String getRight() {
 		return this.Right;
 	}
 
-	public String getUp(){
+	public String getUp() {
 		return this.Up;
 	}
 
-	public String getDown(){
+	public String getDown() {
 		return this.Down;
 	}
 
-	public String toString(){
+	public String toString() {
 		String output = "";
 
 		output = "Name: " + this.Name + "\n"+
-			"Description: " + this.Desc + "\n" +
-			"Image: " + this.Img + "\n" +
-			"Left: " + this.Left + "\n" +
-			"Right: " + this.Right + "\n" +
-			"Up: " + this.Up + "\n" +
-			"Down: " + this.Down;
+		         "Description: " + this.Desc + "\n" +
+		         "Image: " + this.Img + "\n" +
+		         "Left: " + this.Left + "\n" +
+		         "Right: " + this.Right + "\n" +
+		         "Up: " + this.Up + "\n" +
+		         "Down: " + this.Down;
 
 		return output;
 	}

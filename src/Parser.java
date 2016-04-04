@@ -85,4 +85,8 @@ public class Parser {
 			}
 		}
 	}
+
+	public String getTitle() {
+		return this.title;
+	}
 }

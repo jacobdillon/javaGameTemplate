@@ -3,9 +3,9 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class GUI extends JFrame {
-	public static void main(String[]args) {
+	public GUI(String title) {
 		// Frame to use
-		JFrame frame = new JFrame("Game!");
+		JFrame frame = new JFrame(title);
 
 		// Set size of the window
 		frame.setSize(420, 250);
@@ -47,40 +47,21 @@ public class GUI extends JFrame {
 		// Up button
 		final JButton up = new JButton("^");
 		up.setBounds(292, 60, 45, 20);
-		up.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent evt) {
-			}
-		});
 		frame.add(up);
 
 		// Down button
 		final JButton down = new JButton("v");
 		down.setBounds(292, 110, 45, 20);
-		down.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent evt) {
-			}
-		});
 		frame.add(down);
 
 		// Left Button
 		final JButton left = new JButton("<");
 		left.setBounds(242, 85, 45, 20);
-		left.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent evt) {
-			}
-		});
 		frame.add(left);
 
 		// Right Button
 		final JButton right = new JButton(">");
 		right.setBounds(342, 85, 45, 20);
-		right.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent evt) {
-			}
-		});
 		frame.add(right);
-
-		// Make it visible
-		frame.setVisible(true);
 	}
 }

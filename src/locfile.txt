@@ -1,4 +1,14 @@
+Title: Hello
+Location:
 Name: test
+Desc: This is a room
+Img: /some/path/here
+Left: leftImage
+Right: rightImage
+Up: upImage
+Down: downImage
+Location:
+Name: downImage
 Desc: This is a room
 Img: /some/path/here
 Left: leftImage

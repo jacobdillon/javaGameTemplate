@@ -1,95 +1,90 @@
-import java.util.*;
 public class Location {
-
-	private String Name;
-	private String Desc;
-	private String Img;
-
-	private String Left;
-	private String Right;
-	private String Up;
-	private String Down;
+	private String name;
+	private String desc;
+	private String img;
+	private String left;
+	private String right;
+	private String up;
+	private String down;
 
 	public void Location() {
-		this.Name = null;
-		this.Desc = null;
-		this.Img = null;
-
-		this.Left = null;
-		this.Right = null;
-		this.Up = null;
-		this.Down = null;
+		this.name = null;
+		this.desc = null;
+		this.img = null;
+		this.left = null;
+		this.right = null;
+		this.up = null;
+		this.down = null;
 	}
 
-	public void setName(String Name) {
-		this.Name = Name;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public void setDesc(String Desc) {
-		this.Desc = Desc;
+	public void setDesc(String desc) {
+		this.desc = desc;
 	}
 
-	public void setImg(String Img) {
-		this.Img = Img;
+	public void setImg(String img) {
+		this.img = img;
 	}
 
-	public void setLeft(String Left) {
-		this.Left = Left;
+	public void setLeft(String left) {
+		this.left = left;
 	}
 
-	public void setRight(String Right) {
-		this.Right = Right;
+	public void setRight(String right) {
+		this.right = right;
 	}
 
-	public void setUp(String Up) {
-		this.Up = Up;
+	public void setUp(String up) {
+		this.up = up;
 	}
 
-	public void setDown(String Down) {
-		this.Down = Down;
+	public void setDown(String down) {
+		this.down = down;
 	}
 
 
 	public String getName() {
-		return this.Name;
+		return this.name;
 	}
 
 	public String getDesc() {
-		return this.Desc;
+		return this.desc;
 	}
 
 	public String getImg() {
-		return this.Img;
+		return this.img;
 	}
 
 	public String getLeft() {
-		return this.Left;
+		return this.left;
 	}
 
 	public String getRight() {
-		return this.Right;
+		return this.right;
 	}
 
 	public String getUp() {
-		return this.Up;
+		return this.up;
 	}
 
 	public String getDown() {
-		return this.Down;
+		return this.down;
 	}
 
 	public String toString() {
 		String output = "";
 
-		output = "Name: " + this.Name + "\n"+
-		         "Description: " + this.Desc + "\n" +
-		         "Image: " + this.Img + "\n" +
-		         "Left: " + this.Left + "\n" +
-		         "Right: " + this.Right + "\n" +
-		         "Up: " + this.Up + "\n" +
-		         "Down: " + this.Down;
+		output = "Name: " + this.name + "\n"+
+		         "Description: " + this.desc + "\n" +
+		         "Image: " + this.img + "\n" +
+		         "Left: " + this.left + "\n" +
+		         "Right: " + this.right + "\n" +
+		         "Up: " + this.up + "\n" +
+		         "Down: " + this.down;
 
 		return output;
 	}
-
-}//End of Class
+}

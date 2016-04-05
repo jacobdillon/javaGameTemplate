@@ -63,5 +63,8 @@ public class GUI extends JFrame {
 		final JButton right = new JButton(">");
 		right.setBounds(342, 85, 45, 20);
 		frame.add(right);
+
+		// Set the GUI visible
+		frame.setVisible(true);
 	}
 }

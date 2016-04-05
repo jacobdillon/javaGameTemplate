@@ -2,7 +2,9 @@ import java.io.FileNotFoundException;
 
 public class main {
 	public static void main(String [] args) {
-		// Initialize World and Parser objects
+		GUI gui = new GUI("hello");
+
+		/*// Initialize World and Parser objects
 		World world = new World();
 		Parser parser = new Parser(world);
 
@@ -33,5 +35,5 @@ public class main {
 		}
 
 		System.out.println(world.getCurrent());
-	}
+	*/}
 }

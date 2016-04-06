@@ -1,11 +1,24 @@
 import javax.swing.*;
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
+import java.io.IOException;
 
 public class GUI extends JFrame {
+	JFrame frame;
+	JTextField locationName;
+	JTextField status;
+	ImagePanel image;
+	JTextArea description;
+	final JButton up;
+	final JButton down;
+	final JButton left;
+	final JButton right;
+
 	public GUI(String title) {
 		// Frame to use
-		JFrame frame = new JFrame(title);
+		frame = new JFrame(title);
 
 		// Set size of the window
 		frame.setSize(420, 250);
@@ -20,24 +33,24 @@ public class GUI extends JFrame {
 		frame.setResizable(false);
 
 		// Name of Location TextField
-		JTextField locationName = new JTextField("");
+		locationName = new JTextField("");
 		locationName.setBounds(10, 10, 400, 20);
 		locationName.setEditable(false);
 		frame.add(locationName);
 
 		// Status TextBox
-		JTextField status = new JTextField("");
+		status = new JTextField("");
 		status.setBounds(10, 35, 400, 20);
 		status.setEditable(false);
 		frame.add(status);
 
 		// Image JPanel
-		ImagePanel image = new ImagePanel();
+		image = new ImagePanel();
 		image.setBounds(10, 60, 200, 180);
 		frame.add(image);
 
 		// Description TextBox
-		JTextArea description = new JTextArea("");
+		description = new JTextArea("");
 		description.setBounds(215, 135, 195, 105);
 		description.setEditable(false);
 		description.setLineWrap(true);
@@ -45,26 +58,37 @@ public class GUI extends JFrame {
 		frame.add(description);
 
 		// Up button
-		final JButton up = new JButton("^");
+		up = new JButton("^");
 		up.setBounds(292, 60, 45, 20);
 		frame.add(up);
 
 		// Down button
-		final JButton down = new JButton("v");
+		down = new JButton("v");
 		down.setBounds(292, 110, 45, 20);
 		frame.add(down);
 
 		// Left Button
-		final JButton left = new JButton("<");
+		left = new JButton("<");
 		left.setBounds(242, 85, 45, 20);
 		frame.add(left);
 
 		// Right Button
-		final JButton right = new JButton(">");
+		right = new JButton(">");
 		right.setBounds(342, 85, 45, 20);
 		frame.add(right);
 
 		// Set the GUI visible
 		frame.setVisible(true);
+	}
+
+	public void updateLocation(Location loc) {
+		locationName.setText(loc.getName());
+		try {
+			image.setImage(ImageIO.read(new File(loc.getImg())));
+			image.repaint();
+		} catch(IOException e) {
+			System.out.println("[Warning] No image file found");
+		}
+		description.setText(loc.getDesc());
 	}
 }

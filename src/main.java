@@ -2,38 +2,30 @@ import java.io.FileNotFoundException;
 
 public class main {
 	public static void main(String [] args) {
-		GUI gui = new GUI("hello");
-
-		/*// Initialize World and Parser objects
+		// Initialize World and Parser objects
 		World world = new World();
 		Parser parser = new Parser(world);
 
 		// Try to parse the location file
 		try {
 			parser.parse("locfile.txt");
-		} catch(FileNotFoundException | parseError e) {
-			System.out.println("Please create the location file or fix it according to the documentation.");
+		} catch(FileNotFoundException e) {
+			System.out.println("[Error] Location file not found - Create it according to the docs");
 			System.exit(1);
+		} catch(parseError e) {
+			System.out.println("[Error] Parsing file failed - Ahere to the docs");
+			System.exit(2);
 		}
 
 		// Initialize the GUI & make it visible
 		GUI gui = new GUI(parser.getTitle());
-		gui.setVisible(true);
-		try {
-			world.setCurrentLocation("test");
-		} catch(LocationNotFoundException e) {
-			System.out.println(e);
-		}
-
-		System.out.println(world.getCurrent());
-		System.out.println("Down is...");
 
 		try {
-			world.setCurrentLocation(world.getCurrent().getDown());
+			world.setCurrentLocation("Home");
 		} catch(LocationNotFoundException e) {
-			System.out.println(e);
+			System.out.println("[Error] Location not found - Make sure that every location has valid paths");
 		}
 
-		System.out.println(world.getCurrent());
-	*/}
+		gui.updateLocation(world.getCurrentLocation());
+	}
 }

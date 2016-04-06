@@ -1,8 +1,8 @@
 Title: Hello
 Location:
-Name: test
+Name: Home
 Desc: This is a room
-Img: /some/path/here
+Img: hi.jpg
 Left: leftImage
 Right: rightImage
 Up: upImage

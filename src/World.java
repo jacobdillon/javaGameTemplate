@@ -22,7 +22,7 @@ public class World {
 		this.list.add(location);
 	}
 
-	public Location getCurrent() {
+	public Location getCurrentLocation() {
 		return this.current;
 	}
 }

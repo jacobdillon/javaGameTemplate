@@ -3,6 +3,10 @@ import java.io.FileNotFoundException;
 public class main {
 	public static void main(String [] args) {
 		GUI gui = new GUI("hello");
+		World world = new World();
+		Parser parser = new Parser(world);
+
+
 
 		/*// Initialize World and Parser objects
 		World world = new World();

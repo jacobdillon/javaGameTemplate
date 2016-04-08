@@ -22,7 +22,7 @@ public class GUI extends JFrame {
 		frame = new JFrame(title);
 
 		// Set size of the window
-		frame.setSize(422, 267);
+		frame.setSize(420, 250);
 
 		// Manually layout items using setBounds(x, y, w, h)
 		frame.setLayout(null);
@@ -32,6 +32,9 @@ public class GUI extends JFrame {
 
 		// Make it so you can't resize the window
 		frame.setResizable(false);
+
+		// I hate windows
+		frame.setUndecorated(true);
 
 		// Name of Location TextField
 		locationName = new JTextField("");

@@ -22,7 +22,7 @@ public class GUI extends JFrame {
 		frame = new JFrame(title);
 
 		// Set size of the window
-		frame.setSize(420, 250);
+		frame.setSize(422, 267);
 
 		// Manually layout items using setBounds(x, y, w, h)
 		frame.setLayout(null);

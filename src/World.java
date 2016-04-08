@@ -15,7 +15,7 @@ public class World {
 				return;
 			}
 		}
-		throw new LocationNotFoundException("Could not find location");
+		throw new LocationNotFoundException();
 	}
 
 	public void addLocation(Location location) {

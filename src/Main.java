@@ -15,8 +15,7 @@ public class Main {
 		} catch(FileNotFoundException e) {
 			System.out.println("[Error] Location file not found - Create it according to the docs");
 			System.exit(1);
-		} catch(parseError e) {
-			e.printStackTrace();
+		} catch(ParseFailedException e) {
 			System.out.println(e);
 			System.exit(2);
 		}
@@ -24,13 +23,8 @@ public class Main {
 		// Initialize the GUI & make it visible
 		gui = new GUI(parser.getTitle());
 
-		try {
-			world.setCurrentLocation("Home");
-		} catch(LocationNotFoundException e) {
-			System.out.println("[Error] Location not found - Make sure that every location has valid paths");
-		}
-
-		gui.updateLocation(world.getCurrentLocation());
+		// Set location to "Home"
+		goHome();
 	}
 
 	public static void directionRequest(Direction direction) {
@@ -55,7 +49,18 @@ public class Main {
 		try {
 			world.setCurrentLocation(nameOfLocation);
 		} catch(LocationNotFoundException e) {
-			System.out.println("[Error] Location not found - Make sure that every location has valid paths");
+			System.out.println(e);
+		}
+
+		gui.updateLocation(world.getCurrentLocation());
+	}
+
+	public static void goHome() {
+		try {
+			world.setCurrentLocation("Home");
+			gui.setStatus("Move successful.");
+		} catch(LocationNotFoundException e) {
+			System.out.println(e);
 		}
 
 		gui.updateLocation(world.getCurrentLocation());

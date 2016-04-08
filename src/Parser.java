@@ -14,7 +14,7 @@ public class Parser {
 		this.title = null;
 	}
 
-	public void parse(String filename) throws FileNotFoundException, parseError {
+	public void parse(String filename) throws FileNotFoundException, ParseFailedException {
 		Scanner in = new Scanner(new FileReader(filename));
 		String current = "";
 
@@ -22,7 +22,7 @@ public class Parser {
 		if(current.substring(0, current.indexOf(' ')).equals("Title:")) {
 			this.title = current.substring(current.indexOf(' ') + 1);
 		} else {
-			throw new parseError("Error reading Title");
+			throw new ParseFailedException("[Error] Reading title failed");
 		}
 
 		while(in.hasNext()) {
@@ -34,49 +34,49 @@ public class Parser {
 				if(current.substring(0, current.trim().indexOf(' ')).equals("Name:")) {
 					location.setName(current.substring(current.indexOf(' ') + 1));
 				} else {
-					throw new parseError("Error reading room Name");
+					throw new ParseFailedException("[Error] Reading room name failed");
 				}
 
 				current = in.nextLine();
 				if(current.substring(0, current.trim().indexOf(' ')).equals("Desc:")) {
 					location.setDesc(current.substring(current.indexOf(' ')+1));
 				} else {
-					throw new parseError("Error reading room Description");
+					throw new ParseFailedException("[Error] Reading room description failed");
 				}
 
 				current = in.nextLine();
 				if(current.substring(0, current.trim().indexOf(' ')).equals("Img:")) {
 					location.setImg(current.substring(current.indexOf(' ')+1));
 				} else {
-					throw new parseError("Error reading room's Image Path");
+					throw new ParseFailedException("[Error] Reading room image path failed");
 				}
 
 				current = in.nextLine();
 				if(current.substring(0, current.trim().indexOf(' ')).equals("Left:")) {
 					location.setLeft(current.substring(current.indexOf(' ')+1));
 				} else {
-					throw new parseError("Error reading rooms Left");
+					throw new ParseFailedException("[Error] Reading room location to the left failed");
 				}
 
 				current = in.nextLine();
 				if(current.substring(0, current.trim().indexOf(' ')).equals("Right:")) {
 					location.setRight(current.substring(current.indexOf(' ')+1));
 				} else {
-					throw new parseError("Error reading rooms Right");
+					throw new ParseFailedException("[Error] Reading room location to the right failed");
 				}
 
 				current = in.nextLine();
 				if(current.substring(0, current.trim().indexOf(' ')).equals("Up:")) {
 					location.setUp(current.substring(current.indexOf(' ')+1));
 				} else {
-					throw new parseError("Error reading rooms Up");
+					throw new ParseFailedException("[Error] Reading room location up failed");
 				}
 
 				current = in.nextLine();
 				if(current.substring(0, current.trim().indexOf(' ')).equals("Down:")) {
 					location.setDown(current.substring(current.indexOf(' ')+1));
 				} else {
-					throw new parseError("Error reading rooms Down");
+					throw new ParseFailedException("[Error] Reading room location down failed");
 				}
 
 				world.addLocation(location);

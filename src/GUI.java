@@ -15,6 +15,7 @@ public class GUI extends JFrame {
 	final JButton down;
 	final JButton left;
 	final JButton right;
+	final JButton home;
 
 	public GUI(String title) {
 		// Frame to use
@@ -96,6 +97,16 @@ public class GUI extends JFrame {
 			}
 		});
 		frame.add(right);
+
+		// Home Button
+		home = new JButton("\u2302");
+		home.setBounds(292, 85, 45, 20);
+		home.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				Main.goHome();
+			}
+		});
+		frame.add(home);
 
 		// Set the GUI visible
 		frame.setVisible(true);

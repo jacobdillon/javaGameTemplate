@@ -1,5 +1,5 @@
 public class LocationNotFoundException extends Exception {
-	public LocationNotFoundException(String msg) {
-		super(msg);
+	public LocationNotFoundException() {
+		super("[Error] Location not found - Make sure that every location has valid paths");
 	}
 }

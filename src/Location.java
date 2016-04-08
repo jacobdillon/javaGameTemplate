@@ -45,7 +45,6 @@ public class Location {
 		this.down = down;
 	}
 
-
 	public String getName() {
 		return this.name;
 	}
@@ -72,19 +71,5 @@ public class Location {
 
 	public String getDown() {
 		return this.down;
-	}
-
-	public String toString() {
-		String output = "";
-
-		output = "Name: " + this.name + "\n"+
-		         "Description: " + this.desc + "\n" +
-		         "Image: " + this.img + "\n" +
-		         "Left: " + this.left + "\n" +
-		         "Right: " + this.right + "\n" +
-		         "Up: " + this.up + "\n" +
-		         "Down: " + this.down;
-
-		return output;
 	}
 }

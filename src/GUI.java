@@ -60,21 +60,41 @@ public class GUI extends JFrame {
 		// Up button
 		up = new JButton("^");
 		up.setBounds(292, 60, 45, 20);
+		up.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				Main.directionRequest(Direction.UP);
+			}
+		});
 		frame.add(up);
 
 		// Down button
 		down = new JButton("v");
 		down.setBounds(292, 110, 45, 20);
+		down.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				Main.directionRequest(Direction.DOWN);
+			}
+		});
 		frame.add(down);
 
 		// Left Button
 		left = new JButton("<");
 		left.setBounds(242, 85, 45, 20);
+		left.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				Main.directionRequest(Direction.LEFT);
+			}
+		});
 		frame.add(left);
 
 		// Right Button
 		right = new JButton(">");
 		right.setBounds(342, 85, 45, 20);
+		right.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				Main.directionRequest(Direction.RIGHT);
+			}
+		});
 		frame.add(right);
 
 		// Set the GUI visible
@@ -85,10 +105,13 @@ public class GUI extends JFrame {
 		locationName.setText(loc.getName());
 		try {
 			image.setImage(ImageIO.read(new File(loc.getImg())));
-			image.repaint();
 		} catch(IOException e) {
 			System.out.println("[Warning] No image file found");
 		}
 		description.setText(loc.getDesc());
+	}
+
+	public void setStatus(String str) {
+		status.setText(str);
 	}
 }

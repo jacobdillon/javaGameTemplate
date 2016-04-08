@@ -1,17 +1,19 @@
 Title: Hello
+
 Location:
 Name: Home
 Desc: This is a room
-Img: hi.jpg
-Left: leftImage
-Right: rightImage
-Up: upImage
+Img: meme1.png
+Left: null
+Right: null
+Up: null
 Down: downImage
+
 Location:
 Name: downImage
-Desc: This is a room
-Img: /some/path/here
-Left: leftImage
-Right: rightImage
-Up: upImage
-Down: downImage
+Desc: This is a amazing perfect room :D:D:D:D
+Img: meme2.jpg
+Left: null
+Right: null
+Up: Home
+Down: null

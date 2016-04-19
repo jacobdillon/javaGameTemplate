@@ -16,7 +16,7 @@ Img: ..\resources\images\houseFront.jpg
 Left: null
 Right: null
 Up: porch
-Down: houseFront
+Down: Home
 
 Location:
 Name: porch
@@ -34,7 +34,7 @@ Img: ..\resources\images\houseDoor.jpg
 Left: null
 Right: null
 Up: hallway
-Down: null
+Down: porch
 
 Location:
 Name: hallway
@@ -82,6 +82,15 @@ Up: skeleton
 Down: leaveDungeon
 
 Location:
+Name: leaveDungeon
+Desc: You turn around to leave the dungeon.
+Img: ..\resources\images\leaveDungeon.jpg
+Left: null
+Right: null
+Up: hallway
+Down: dungeon
+
+Location:
 Name: skeleton
 Desc: In front of you is a sad skeleton.
 Img: ..\resources\images\skeleton.jpg
@@ -93,7 +102,7 @@ Down: dungeon
 Location:
 Name: skeletonDead
 Desc: Press home to restart.
-Img: ..\resources\images\skeletonDead
+Img: ..\resources\images\skeletonDead.jpg
 Left: null
 Right: null
 Up: null

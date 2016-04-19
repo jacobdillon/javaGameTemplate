@@ -12,4 +12,5 @@ the "game.jm" file.
 
 ### Configuring ####
 To configure and create your own map for TGTP, edit the "game.jm" file under
-resources.  This file is in a "key: value".
+resources.  This file is in a "key: value" format.
+

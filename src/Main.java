@@ -11,7 +11,7 @@ public class Main {
 
 		// Try to parse the location file
 		try {
-			parser.parse("locfile.txt");
+			parser.parse("../resources/game.jm");
 		} catch(FileNotFoundException e) {
 			System.out.println("[Error] Location file not found - Create it according to the docs");
 			System.exit(1);

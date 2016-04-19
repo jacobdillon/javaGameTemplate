@@ -117,7 +117,7 @@ public class GUI extends JFrame {
 		try {
 			image.setImage(ImageIO.read(new File(loc.getImg())));
 		} catch(IOException e) {
-			System.out.println("[Warning] No image file found");
+			System.out.println("[Warning] No image file found - " + loc.getImg());
 		}
 		description.setText(loc.getDesc());
 	}
